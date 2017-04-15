@@ -1,3 +1,7 @@
+[v-cloak]{
+    display:none;
+}
+
 #BF, #BF textarea{
     font-size : 12px;
     font-family: 'Courier New';
