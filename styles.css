@@ -1,0 +1,55 @@
+#BF, #BF textarea{
+    font-size : 12px;
+    font-family: 'Courier New';
+}
+
+#BF.container {
+    width: 500px;
+    margin: 20px auto;
+}
+
+#BF.row {
+    margin-bottom: 20px;
+}
+
+#BF textarea {
+    width: 100%;
+    padding: 4px;
+    box-sizing: border-box;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+#BF h2 {
+    font-size: 14px;
+    border-bottom: 1px solid #666;
+    color: #666;
+    padding: 0 0 4px 0;
+    letter-spacing: 0.05em;
+}
+
+#BF .source span {
+    padding: 0.2px;
+    margin-right: 5px;
+    color: #bbb;
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+}
+
+#BF .source span.current {
+    font-weight: bold;
+    padding: 0.2px;
+    color: #666;
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 4px solid #ccc;
+}
+
+#BF>.hidden {
+    display : none;
+}
+
+#BF textarea:disabled{
+    background: #eee;
+}

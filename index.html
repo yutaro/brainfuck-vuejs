@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang = "ja">
+    <head>
+        <meta charset = "utf-8">
+        <title>Brain fu*k</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="BF" class = "container">
+            <div class = "row">
+                <textarea id="code" v-model="code"></textarea>
+                <div>
+                    <button @click="load" :disabled = "code == ''" >Load</button>
+                    <button @click="step" :disabled = "!stepActive" >Step</button>
+                    <button @click="run"  :disabled = "!stepActive" >Run</button>
+                    <button @click="reset">Reset</button>
+                </div>
+            </div>
+            <div :class="{ hidden : !active }">
+                <h2>CODE</h2>
+                <div class="row source">
+                    <span v-for="(step, index) in steps" :class = "{current : index === pos}">{{ step }}</span>
+                </div>
+                <h2>CELLS</h2>
+                <div class="row source">
+                    <span v-for="(cell, index) in cells" :class = "{current : index === ptr}" :title="'cell['+ index + ']'">{{ cell }}</span>
+                </div>
+                <h2>OUTPUT</h2>
+                <div class="row source">
+                    <span>{{ outStr }}</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
